@@ -6,4 +6,4 @@ var e;!function(t,o){if("function"==typeof e&&e.amd)e(["exports"],o);else if("un
 },{"body-scroll-lock":"bJct"}],"g2Hq":[function(require,module,exports) {
 "use strict";function e(){var e=.01*window.innerHeight;document.documentElement.style.setProperty("--vh","".concat(e,"px"))}require("./mobile-menu"),console.log("Great State Burger 🍔"),window.addEventListener("resize",e),e();
 },{"./mobile-menu":"kNbn"}]},{},["g2Hq"], null)
-//# sourceMappingURL=/scripts.81ac8103.js.map
+//# sourceMappingURL=/gsb-mobile-menu/scripts.81ac8103.js.map
