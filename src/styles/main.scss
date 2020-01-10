@@ -25,7 +25,7 @@ img {
   text-decoration: none;
 
   &::before {
-    background: $white;
+    background: currentColor;
     bottom: 0;
     content: "";
     display: block;
@@ -37,7 +37,11 @@ img {
     transition: transform 0.5s ease;
   }
 
-  &:hover::before {
-    transform: scaleX(1);
+  // try to scope mouse-over effects to desktop devices
+  // ...or else touch devices will mistake "hover" for "active"
+  @media screen and (min-width: $device-md) {
+    &:hover::before {
+      transform: scaleX(1);
+    }
   }
 }
