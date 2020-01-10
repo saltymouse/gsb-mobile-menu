@@ -52,7 +52,7 @@
   @media screen and (min-width: $device-sm) {
     &:hover {
       .hamburger__logo {
-        transform: rotate(-8deg);
+        transform: rotate(-9deg) scale(1.1) translateY(-0.2rem);
       }
     }
   }
@@ -111,6 +111,14 @@
     transition: color 200ms 200ms;
   }
 
+  @media screen and (min-width: $device-sm) {
+    &__link:hover {
+      .main-nav__link-icon {
+        transform: rotate(-9deg) scale(1.1) translateY(-0.2rem);
+      }
+    }
+  }
+
   &.is-active {
     .main-nav__link {
       color: $white;
@@ -122,6 +130,7 @@
     display: flex;
     justify-content: center;
     height: 2rem;
+    transition: transform 250ms;
     width: 2rem;
   }
 
