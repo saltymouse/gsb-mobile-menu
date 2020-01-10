@@ -1,0 +1,77 @@
+// Mobile Navigation Menu
+.mobile-menu {
+  background-color: $blue;
+  background-image: url("../img/gsb-retro-motif@2x.png");
+  background-size: cover;
+  border: $sp-big solid $white;
+  height: calc(var(--vh, 1vh) * 100);
+  left: 0;
+  position: fixed;
+  top: 0;
+  transform: translateY(-100%);
+  transition: transform 300ms;
+  width: 100vw;
+  z-index: $z-mid;
+
+  &.is-active {
+    transform: translateY(0);
+  }
+
+  &__list {
+    align-items: stretch;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 100%;
+    justify-items: stretch;
+    list-style: none;
+    margin: 0;
+    padding: 6.2rem 0 0 0;
+  }
+
+  &__item {
+    align-items: center;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 350ms;
+  }
+
+  &.is-active &__item {
+    opacity: 1;
+  }
+
+  // set a progressively longer delay for each item for fade-in effect
+  @for $i from 1 through 6 {
+    &__item:nth-child(#{$i}) {
+      transition-delay: 75ms * $i;
+    }
+  }
+
+  &__link {
+    align-items: center;
+    color: $white;
+    display: inline-flex;
+    font-family: $kapra-bold;
+    font-weight: bold;
+    font-size: 2.2rem;
+    text-decoration: none;
+
+    @media screen and (min-width: $device-sm) {
+      font-size: 3.6rem;
+    }
+  }
+}
+
+@media screen and (orientation: landscape) and (max-width: $device-md) {
+  .mobile-menu__list {
+    flex-flow: row wrap;
+  }
+
+  .mobile-menu__item {
+    flex: 1 0 33.333%;
+  }
+}
+
+@media screen and (min-width: 577px) {
+}

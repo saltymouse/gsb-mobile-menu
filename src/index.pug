@@ -1,0 +1,59 @@
+- var nav = [ {name: 'Home', link: '/'}, {name: 'Locations', link: '#locations'}, {name: 'Menu', link: '#menu'}, {name: 'About', link: '#about'}, {name: 'Catering', link: '#catering'}, {name: 'Jobs', link: '#jobs'} ];
+
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Great State Burger | Burgers for the win!
+    link(rel="stylesheet", href="./styles/main.scss")
+  body
+    main
+      .main-header
+        button.hamburger(aria-haspopup="true")
+          .hamburger__logo
+            img(src="./img/gsb-logo-8.png", alt="Great State Burger Logo", srcset="./img/gsb-logo@2x.png 2x")
+          .hamburger__icon
+            img.hamburger__icon.hamburger__icon--open(src="./img/gsb-icon-hamburger-open-8.png", alt="Menu Open", srcset="./img/gsb-icon-hamburger-open@2x.png 2x")
+            img.hamburger__icon.hamburger__icon--close(src="./img/gsb-icon-hamburger-close-8.png", alt="Menu Close", srcset="./img/gsb-icon-hamburger-close@2x.png 2x")
+        nav.main-nav
+          ul.main-nav__list
+            li.main-nav__item
+              a.main-nav__link(href="#locations")
+                .main-nav__link-icon
+                  img(src="./img/gsb-icon-locations-8.png", alt="Locations Icon", srcset="./img/gsb-icon-locations@2x.png 2x")
+                .main-nav__link-text Locations
+            li.main-nav__item
+              a.main-nav__link(href="#locations")
+                .main-nav__link-icon
+                  img(src="./img/gsb-icon-order-8.png", alt="Order Online Icon", srcset="./img/gsb-icon-order@2x.png 2x")
+                .main-nav__link-text Order Online
+      nav.mobile-menu
+        ul.mobile-menu__list
+          each item in nav
+            li.mobile-menu__item
+              a.mobile-menu__link.link-effect(href=item.link)= item.name 
+      
+      article
+        img(src="./img/gsb-logo-wordmark-8.png", alt="", srcset="")
+        p Alle kraaien zijn eender”, zei een wijs man, toen hij het over politici had. Dat is volkomen waar—in het donker, maar bij daglicht is er tusschen twee kraaien die je aantreft evenveel verschil, in- en uitwendig, als tusschen twee van de eerste de beste mannen of vrouwen. Ik vroeg eens aan een klein kind, dat me alles over haar kuikentje vertelde, hoe ze het hare uit twintig net zulke uit den koppel kende. „Hoe ik mijn kuikentje ken? Ik ken het aan zijn gezichtje”, zei ze. En werkelijk, wanneer je dat kopje nauwkeurig bekeek, verschilde het van alle andere.
+        p Dit gaat ongetwijfeld op voor alle dieren, vogels incluis. Ze herkennen elkaar onmiddellijk onder een menigte van hun soortgenooten, en wie ze zorgvuldig gadeslaat ziet evenveel eigenaardige gewoonten en karakters onder de boschbewoners als onder andere schepselen. Het geeft daarom niets, al ken je de kraaiengewoonten of die van het rendier in ’t algemeen ook nog zoo goed; maar bestudeer eens den eersten den besten die je weg kruist, alsof hij een geheel vreemde was, open je oogen om te zien en je hart om te vertolken, en je zult stellig iets nieuws ontdekken: de een of andere eigenaardige gewoonte, die je nooit vermeld had gevonden—om je zwerftochten tot een genot te maken en je naar huis te doen keeren met een nieuwe belangstelling.
+        p Dit eigen karakter van de dieren in de natuur zal misschien veel van hun gewoonten, in dit boekje beschreven, verklaren; gewoonten, die den lezer niet vreemder of verbazingwekkender kunnen lijken dan den schrijver, toen hij ze ’t eerst ontdekte. Ze zijn bijna geheel aanteekeningen van persoonlijke waarneming in bosschen en velden. Af en toe, wanneer ik mijn jager of houthakker goed kende, heb ik diens getuigenis gebruikt, maar nooit zonder haar zorgvuldig te overwegen, en altijd stelde ik haar, wanneer dat mogelijk was, op de proef, door het bewuste dier dagen of weken gade te slaan, tot ik zelf zag dat alles waar was.
+    footer
+      nav.footer-nav
+        .footer-nav__logo
+          a(href="/")
+            img(src="./img/gsb-logo-slogan-8.png", alt="Great State Burger: Burgers for the win!", srcset="./img/gsb-logo-slogan@2x.png 2x")
+        ul.footer-nav__list
+          each item in nav
+            li.footer-nav__item
+              a.footer-nav__link.link-effect(href=item.link)= item.name
+      .colophon
+        ul.colophon__list
+          li.colophon__item
+            a.colophon__link.link-effect(href="#privacy") Privacy Policy
+          li.colophon__item © Great State Burger
+          li.colophon__item
+            a.colophon__link.link-effect(href="#credits") Site Credits
+    script(src="./scripts/index.js")

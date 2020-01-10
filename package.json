@@ -1,0 +1,23 @@
+{
+  "name": "gsb-mobile-nav",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel ./src/index.pug",
+    "build": "parcel build src/index.pug",
+    "deploy": "gh-pages -d dist"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.3",
+    "gh-pages": "^2.2.0",
+    "parcel-bundler": "^1.12.4",
+    "postcss-modules": "^1.5.0",
+    "pug": "^2.0.4",
+    "sass": "^1.24.3"
+  },
+  "dependencies": {
+    "body-scroll-lock": "^2.6.4",
+    "normalize.css": "^8.0.1"
+  }
+}

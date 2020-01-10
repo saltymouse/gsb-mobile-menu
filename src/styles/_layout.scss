@@ -1,0 +1,51 @@
+// Base Settings
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+// Base Layout
+body {
+  background: $blue;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: $font-default;
+  font-size: 16px;
+}
+
+main {
+  background: $white;
+  border: $sp-big solid $blue;
+  border-bottom: none;
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column nowrap;
+}
+
+header {
+}
+
+article {
+  align-items: center;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding: $sp-big;
+  flex: 1;
+}
+
+footer {
+  padding: $sp-big;
+  background: $blue;
+  margin-top: auto; // pushes footer to bottom even w/o enough content
+}

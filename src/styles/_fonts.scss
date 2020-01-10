@@ -1,0 +1,32 @@
+// Kapra Neue Regular
+// https://www.myfonts.com/fonts/blazej-ostoja-lniski/kapra-neue/regular/
+@font-face {
+  font-family: "Kapra Neue";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/KapraNeue-Regular.woff2) format("woff2"),
+    url(../fonts/KapraNeue-Regular.woff) format("woff");
+}
+
+// Kapra Neue Bold
+// https://www.myfonts.com/fonts/blazej-ostoja-lniski/kapra-neue/bold/
+@font-face {
+  font-family: "Kapra Neue Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(../fonts/KapraNeue-Bold.woff2) format("woff2"),
+    url(../fonts/KapraNeue-Bold.woff) format("woff");
+}
+
+// Kapra Neue Regular Expanded
+// https://www.myfonts.com/fonts/blazej-ostoja-lniski/kapra-neue/regular-expanded/
+@font-face {
+  font-family: "Kapra Neue Regular Expanded";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/KapraNeue-RegularExpanded.woff2) format("woff2"),
+    url(../fonts/KapraNeue-RegularExpanded.woff) format("woff");
+}
