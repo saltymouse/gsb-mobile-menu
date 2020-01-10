@@ -2,6 +2,10 @@
 
 This is a [Parcel](https://github.com/parcel-bundler/parcel)-powered project.
 
+### Demo
+
+https://saltymouse.github.io/gsb-mobile-menu/
+
 ### Browsers Tested
 
 Only tested these latest evergreen browsers.

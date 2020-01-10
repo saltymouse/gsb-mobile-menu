@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "homepage": "https://saltymouse.github.io/gsb-mobile-menu/",
   "scripts": {
     "start": "parcel ./src/index.pug",
-    "build": "parcel build src/index.pug",
+    "prebuild": "rm -rf dist",
+    "build": "parcel build src/index.pug --public-url /gsb-mobile-menu/",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
